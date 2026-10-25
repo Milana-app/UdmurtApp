@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="#2D2D2D"
+            android:contentDescription="Назад" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выберите правильный\nперевод"
+            android:textColor="#1A1A1A"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Блок вопроса -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Корка"
+                    android:textColor="#E53935"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Варианты ответов -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <!-- Вариант 1 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardOption1"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="2dp"
+                app:strokeColor="#D32F2F"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/tvOption1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:text="Дом"
+                    android:textColor="#2D2D2D"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Вариант 2 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardOption2"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="2dp"
+                app:strokeColor="#D32F2F"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/tvOption2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:text="Лес"
+                    android:textColor="#2D2D2D"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Вариант 3 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardOption3"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="2dp"
+                app:strokeColor="#D32F2F"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/tvOption3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:text="Вода"
+                    android:textColor="#2D2D2D"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Вариант 4 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardOption4"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="2dp"
+                app:strokeColor="#D32F2F"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/tvOption4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:text="Небо"
+                    android:textColor="#2D2D2D"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCheck"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="16dp"
+            android:text="Проверить"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_button_check" />
+
+        <LinearLayout
+            android:id="@+id/llPattern"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

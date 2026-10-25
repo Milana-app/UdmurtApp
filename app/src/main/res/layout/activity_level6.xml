@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="#2D2D2D"
+                android:contentDescription="Назад" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Верно ли подписано слово?"
+                android:textColor="#1A1A1A"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Блок с картинкой -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="2dp">
+
+                <ImageView
+                    android:id="@+id/ivWordImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:padding="16dp"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:contentDescription="Картинка слова" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Текст под картинкой -->
+            <TextView
+                android:id="@+id/tvWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="шунды"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#E53935"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/tvTranslationHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <!-- Кнопки Верно / Неверно -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnTrue"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Верно"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:textAllCaps="false" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnFalse"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="Неверно"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <!-- Блок с объяснением -->
+            <TextView
+                android:id="@+id/tvExplanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#2E7D32"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:padding="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Кнопка и Орнамент -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="16dp">
+
+        <!-- Кнопка Проверить -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCheck"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:text="Проверить"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_button_check" />
+
+        <!-- Узор -->
+        <LinearLayout
+            android:id="@+id/llPattern"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+            <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:src="@drawable/ornament_red" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
